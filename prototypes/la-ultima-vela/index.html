@@ -800,8 +800,8 @@ function drawWorld(withEnemies = true) {
   }
   // wax pools
   for (const q of s.pools) {
-    b.fillStyle = '#7a4a1a'; pcircle(b, sx(q.x), sy(q.y), q.r);
-    b.fillStyle = '#d88a2a'; pcircle(b, sx(q.x), sy(q.y), Math.max(1, q.r - 3));
+    b.fillStyle = 'rgba(122,74,26,0.55)'; pcircle(b, sx(q.x), sy(q.y), q.r);
+    b.fillStyle = 'rgba(216,138,42,0.35)'; pcircle(b, sx(q.x), sy(q.y), Math.max(1, q.r - 3));
     b.fillStyle = '#ffd070';
     for (let i = 0; i < 4; i++) { const a = i * 1.7 + t * 2; b.fillRect(sx(q.x + Math.cos(a) * q.r * 0.5), sy(q.y + Math.sin(a) * q.r * 0.4), 1, 1); }
   }
@@ -853,9 +853,10 @@ function drawWorld(withEnemies = true) {
   dk.fillStyle = 'rgba(0,0,0,1)'; pcircle(dk, px, py, Math.round(R * 0.7));
   dk.fillStyle = 'rgba(0,0,0,0.6)';
   for (const k of s.sparks) pcircle(dk, sx(k.x), sy(k.y), 5);
-  for (const q of s.pools) pcircle(dk, sx(q.x), sy(q.y), q.r + 3);
+  for (const q of s.pools) pcircle(dk, sx(q.x), sy(q.y), q.r);
   b.drawImage(dark, 0, 0);
-  b.fillStyle = 'rgba(255,170,70,0.07)'; pcircle(b, px, py, Math.round(R * 0.7));
+  b.fillStyle = 'rgba(255,160,60,0.06)'; pcircle(b, px, py, Math.round(R * 0.86));
+  b.fillStyle = 'rgba(255,170,70,0.10)'; pcircle(b, px, py, Math.round(R * 0.7));
 
   // outside the light, only eyes glint
   if (withEnemies) {
@@ -903,7 +904,7 @@ function drawHUD() {
     panel(x - 18, y - 16, 36, 32, evo ? '#5a2a10' : '#1a1630', evo ? '#ffb040' : null);
     icon(spr, x, y, 3); text(String(lv), x + 13, y + 9, 14, '#ffffff'); i++;
   };
-  for (const id in P.w) slot(ICON[id], P.evo[id] ? '★' : P.w[id], P.evo[id]);
+  for (const id in P.w) slot(ICON[id], P.evo[id] ? 'E' : P.w[id], P.evo[id]);
   i++;
   for (const id in P.pa) slot(ICON[id], P.pa[id], false);
   if (s.boss && !s.boss.dead) {

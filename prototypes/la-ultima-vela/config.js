@@ -25,7 +25,7 @@ window.CONFIG = {
 
   // The horde
   spawn_base: { value: 0.9, min: 0.1, max: 6, step: 0.1 },        // enemies/s at minute 0
-  spawn_growth: { value: 0.42, min: 0, max: 3, step: 0.02 },      // extra enemies/s per minute
+  spawn_growth: { value: 0.6, min: 0, max: 3, step: 0.02 },      // extra enemies/s per minute
   max_enemies: { value: 320, min: 50, max: 800, step: 10 },
   hp_growth: { value: 0.12, min: 0, max: 1, step: 0.01 },         // enemy hp +12% per minute
 
@@ -35,7 +35,7 @@ window.CONFIG = {
 
   hound_start: { value: 50, min: 0, max: 600, step: 5 },          // s when crypt hounds join
   hound_hp: { value: 14, min: 1, max: 120, step: 1 },
-  hound_speed: { value: 50, min: 10, max: 120, step: 1 },
+  hound_speed: { value: 46, min: 10, max: 120, step: 1 },
   hound_damage: { value: 6, min: 0, max: 40, step: 1 },
 
   skel_hp: { value: 55, min: 5, max: 400, step: 5 },
@@ -74,7 +74,7 @@ window.CONFIG = {
   ring_fraction: { value: 0.42, min: 0.1, max: 1, step: 0.01 },   // share of the light that burns
   wax_damage: { value: 6, min: 1, max: 60, step: 1 },
   wax_cooldown: { value: 2.4, min: 0.3, max: 8, step: 0.1 },
-  wax_radius: { value: 13, min: 4, max: 50, step: 1 },
+  wax_radius: { value: 9, min: 4, max: 50, step: 1 },
   wax_duration: { value: 2.6, min: 0.5, max: 8, step: 0.1 },
 
   // Drops and the workshop
